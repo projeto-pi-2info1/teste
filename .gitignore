@@ -27,8 +27,5 @@ coverage
 *.sln
 *.sw?
 
-# local env files
-.env*.local
-
 *.tsbuildinfo
 .vercel
