@@ -12,7 +12,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           projectName: teste
-          envVariableKeys: CLIENT_EMAIL,PRIVATE_KEY,SPREADSHEET_ID
+          envVariableKeys: CLIENT_EMAIL,PRIVATE_KEY
         env:
           CLIENT_EMAIL: ${{ secrets.CLIENT_EMAIL }}
           TARGET_CLIENT_EMAIL: preview,development,production
@@ -21,10 +21,6 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           TARGET_PRIVATE_KEY: preview,development,production
           TYPE_PRIVATE_KEY: encrypted
-
-          SPREADSHEET_ID: ${{ secrets.EVENTS_APP_SPREADSHEET_ID }}
-          TARGET_SPREADSHEET_ID: preview,development,production
-          TYPE_SPREADSHEET_ID: encrypted
 
       - uses: amondnet/vercel-action@v20
         with:
